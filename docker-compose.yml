@@ -1,8 +1,7 @@
 version: "3.8"
 services:
-  mysql:
-    build:
-      context: ./mysql/
+  db:
+    image: mysql:5.7
     volumes:
       - ./mysql/log:/var/log/mysql
       - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf

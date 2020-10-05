@@ -13,6 +13,7 @@
     "lint": "eslint \"src/**/*.ts\""
   },
   "dependencies": {
+    "@prisma/client": "^2.8.0",
     "mysql": "^2.18.1",
     "neverthrow": "^2.7.1",
     "reflect-metadata": "^0.1.13",
@@ -20,6 +21,7 @@
     "uuid": "^8.3.0"
   },
   "devDependencies": {
+    "@prisma/cli": "^2.8.0",
     "@types/faker": "^5.1.2",
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.2",
