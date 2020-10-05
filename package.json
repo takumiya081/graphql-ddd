@@ -1,0 +1,44 @@
+{
+  "name": "new-api",
+  "version": "1.0.0",
+  "description": "新しいapi server",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "test": "jest test",
+    "lint": "eslint \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "neverthrow": "^2.7.1",
+    "reflect-metadata": "^0.1.13",
+    "shallow-equal-object": "^1.1.1",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/faker": "^5.1.2",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "faker": "^5.1.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
+  }
+}
