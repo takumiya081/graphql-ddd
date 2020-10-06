@@ -31,7 +31,6 @@ function prismaTestConnection() {
   return {
     before: async () => {
       databaseName = `test_${nanoid().replace('-', '_')}`;
-      console.log('databaseName', databaseName);
       databaseUrl = `mysql://root:password@localhost:3306/${databaseName}`;
 
       const connection = await mysql.createConnection({

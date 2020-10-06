@@ -1,6 +1,10 @@
 /* eslint-disable jest/require-top-level-describe */
 import {createTestContext} from '~/graphql/utils/__testHelpers';
 
+jest.mock('uuid', () => ({
+  v4: jest.fn().mockReturnValue('testId'),
+}));
+
 const ctx = createTestContext();
 test('ensures that a owner can create', async () => {
   expect.hasAssertions();
@@ -28,7 +32,7 @@ test('ensures that a owner can create', async () => {
       "data": Object {
         "ownerCreate": Object {
           "owner": Object {
-            "id": "T3duZXI9PT09PT09MjAzZDkyN2ItMDAwMi00YTY2LWFjOTQtMTdlZjE1Y2Y0ZDc0",
+            "id": "T3duZXI9PT09PT09dGVzdElk",
             "name": "test-owner",
             "paymentId": null,
           },
