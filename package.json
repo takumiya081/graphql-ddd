@@ -10,8 +10,9 @@
   },
   "scripts": {
     "dev": "ts-node-dev --transpile-only --no-notify src/infra/graphqlServer/index.ts",
-    "test": "jest test",
-    "lint": "eslint \"src/**/*.ts\""
+    "test": "prisma generate && jest",
+    "lint": "eslint \"src/**/*.ts\"",
+    "generate": "ts-node-dev --transpile-only src/infra/graphqlServer/schema.ts"
   },
   "_moduleAliases": {
     "~": "./src"
@@ -20,6 +21,7 @@
     "@nexus/schema": "^0.16.0",
     "@prisma/client": "^2.8.0",
     "apollo-server": "^2.18.1",
+    "dedent": "^0.7.0",
     "graphql": "^15.3.0",
     "js-base64": "^3.5.2",
     "module-alias": "^2.2.2",
@@ -31,12 +33,14 @@
   },
   "devDependencies": {
     "@prisma/cli": "^2.8.0",
+    "@types/dedent": "^0.7.0",
     "@types/faker": "^5.1.2",
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.2",
     "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
+    "apollo-server-testing": "^2.18.2",
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.12.0",
@@ -48,6 +52,8 @@
     "eslint-plugin-simple-import-sort": "^5.0.3",
     "faker": "^5.1.0",
     "jest": "^26.4.2",
+    "mysql2": "^2.2.5",
+    "nanoid": "^3.1.12",
     "prettier": "^2.1.2",
     "ts-jest": "^26.4.1",
     "ts-node-dev": "^1.0.0-pre.63",

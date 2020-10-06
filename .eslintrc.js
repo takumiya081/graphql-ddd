@@ -91,6 +91,6 @@ module.exports = {
     'node/no-missing-import': OFF,
     'no-underscore-dangle': OFF,
     'node/no-unpublished-import': OFF,
-    'import/no-extraneous-dependencies': [ERROR, {devDependencies: ['**/*.test.ts']}],
+    'import/no-extraneous-dependencies': [ERROR, {devDependencies: ['**/*.test.ts', '**/__testHelpers/**/*']}],
   },
 };
