@@ -15,7 +15,7 @@ export class Owner extends Entity<OwnerProps> {
   }
 
   public get name() {
-    return this.name;
+    return this.props.name;
   }
 
   public set name(name: OwnerName) {
