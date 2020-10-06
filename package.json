@@ -9,11 +9,20 @@
     "node": ">=12.0.0"
   },
   "scripts": {
+    "dev": "ts-node-dev --transpile-only --no-notify src/infra/graphqlServer/index.ts",
     "test": "jest test",
     "lint": "eslint \"src/**/*.ts\""
   },
+  "_moduleAliases": {
+    "~": "./src"
+  },
   "dependencies": {
+    "@nexus/schema": "^0.16.0",
     "@prisma/client": "^2.8.0",
+    "apollo-server": "^2.18.1",
+    "graphql": "^15.3.0",
+    "js-base64": "^3.5.2",
+    "module-alias": "^2.2.2",
     "mysql": "^2.18.1",
     "neverthrow": "^2.7.1",
     "reflect-metadata": "^0.1.13",
@@ -41,6 +50,7 @@
     "jest": "^26.4.2",
     "prettier": "^2.1.2",
     "ts-jest": "^26.4.1",
+    "ts-node-dev": "^1.0.0-pre.63",
     "typescript": "^4.0.3"
   }
 }
